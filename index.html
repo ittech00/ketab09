@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دسته‌بندی کتاب‌ها</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .category {
+            margin: 20px 0;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .category a {
+            text-decoration: none;
+            color: #4CAF50;
+            border: 2px solid #4CAF50;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .category a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .book {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .book img {
+            width: 100px;
+            height: auto;
+            margin-left: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>دسته‌بندی کتاب‌ها</h1>
+    </header>
+
+    <div class="container" id="main-page">
+        <div class="category">
+            <a href="#" onclick="showPage('fiction')">کتاب‌های داستانی</a>
+        </div>
+        <div class="category">
+            <a href="#" onclick="showPage('nonfiction')">کتاب‌های غیرداستانی</a>
+        </div>
+        <div class="category">
+            <a href="#" onclick="showPage('science')">کتاب‌های علمی</a>
+        </div>
+        <div class="category">
+            <a href="#" onclick="showPage('documentary')">کتاب‌های مستند</a>
+        </div>
+        <div class="category">
+            <a href="#" onclick="showPage('research')">کتاب‌های پژوهشی</a>
+        </div>
+    </div>
+
+    <div class="container" id="fiction-page" style="display: none;">
+        <h2>کتاب‌های داستانی</h2>
+        <div class="book">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAAAAQIBAAD/2wBDAAoHBwkHCAgMDx8NDx8lJCIlLCQyKSo8KykmLTI9Vkg9YmCgYCslIzM4JxwdKD0qOi47LjsqLzkwLV8YH2u++Xs3P4E3AGtoZRsJl1Iyy7h0VsVAzQk29kDb4hzE7VJkLopmSEfE6ktptkRl4pQn16mHsF6zjWyNG5cmxHqugTpw65q+f70WVjZnFzHZw2wpAN60pkEuaM1tJquSwunOU5rc3V6M7iR+qJ8OjMnzYgEPUbp4pyRggQbQLmyccuRTALnTA7OqzDFx0Jl0Go/aM8l3gAFYQ1En0gysT9t58IsYckfI7kjT1pB3A2ZzXoRR7uH9QG8kOrSw7PRFQcKYrc61eGoXYeHqn++T5chHItvStjeQ=="/>
+            <span><a href="#">کتاب داستانی 1</a></span>
+        </div>
+        <div class="book">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAAAAQIBAAD/2wBDAAoHBwkHCAgMDx8NDx8lJCIlLCQyKSo8KykmLTI9Vkg9YmCgYCslIzM4JxwdKD0qOi47LjsqLzkwLV8YH2u++Xs3P4E3AGtoZRsJl1Iyy7h0VsVAzQk29kDb4hzE7VJkLopmSEfE6ktptkRl4pQn16mHsF6zjWyNG5cmxHqugTpw65q+f70WVjZnFzHZw2wpAN60pkEuaM1tJquSwunOU5rc3V6M7iR+qJ8OjMnzYgEPUbp4pyRggQbQLmyccuRTALnTA7OqzDFx0Jl0Go/aM8l3gAFYQ1En0gysT9t58IsYckfI7kjT1pB3A2ZzXoRR7uH9QG8kOrSw7PRFQcKYrc61eGoXYeHqn++T5chHItvStjeQ=="/>
+            <span><a href="#">کتاب داستانی 2</a></span>
+        </div>
+        <a href="#" onclick="showPage('main')">بازگشت به صفحه اصلی</a>
+    </div>
+
+    <div class="container" id="nonfiction-page" style="display: none;">
+        <h2>کتاب‌های غیرداستانی</h2>
+        <div class="book">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAAAAQIBAAD/2wBDAAoHBwkHCAgMDx8NDx8lJCIlLCQyKSo8KykmLTI9Vkg9YmCgYCslIzM4JxwdKD0qOi47LjsqLzkwLV8YH2u++Xs3P4E3AGtoZRsJl1Iyy7h0VsVAzQk29kDb4hzE7VJkLopmSEfE6ktptkRl4pQn16mHsF6zjWyNG5cmxHqugTpw65q+f70WVjZnFzHZw2wpAN60pkEuaM1tJquSwunOU5rc3V6M7iR+qJ8OjMnzYgEPUbp4pyRggQbQLmyccuRTALnTA7OqzDFx0Jl0Go/aM8l3gAFYQ1En0gysT9t58IsYckfI7kjT1pB3A2ZzXoRR7uH9QG8kOrSw7PRFQcKYrc61eGoXYeHqn++T5chHItvStjeQ=="/>
+            <span><a href="#">کتاب غیرداستانی 1</a></span>
+        </div>
+        <a href="#" onclick="showPage('main')">بازگشت به صفحه اصلی</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 دسته‌بندی کتاب‌ها</p>
+    </footer>
+
+    <script>
+        function showPage(page) {
+            // Hide all pages
+            const pages = ['main', 'fiction', 'nonfiction'];
+            pages.forEach(p => {
+                document.getElementById(p + '-page').style.display = 'none';
+            });
+
+            // Show selected page
+            if (page === 'main') {
+                document.getElementById('main-page').style.display = 'block';
+            } else {
+                document.getElementById(page + '-page').style.display = 'block';
+            }
+        }
+
+        // Initialize with the main page visible
+        showPage('main');
+    </script>
+</body>
+</html>
